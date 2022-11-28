@@ -71,7 +71,8 @@ class Url():
         self.driver.quit()
 
     def get_latest(self):
-        self.driver.execute_script('window.scrollTo(0, 10000);')
+        self.driver.execute_script('window.scrollTo(0, 1000);')
+        time.sleep(1)
         element = self.driver.find_element(
                 By.XPATH, '//*[@id="easy-wrapper"]/div[2]/aside/section[2]/div[1]/a[1]'
                 )
