@@ -53,7 +53,7 @@ class Url():
         self.service = fs.Service(executable_path=self.DRIVER_PATH)
         self.options = Options()
         self.options.add_argument('--window-size=1920,1200')
-        self.options.add_argument('--headless')
+        # self.options.add_argument('--headless')
         self.regular_url = []
 
     def startup(self):

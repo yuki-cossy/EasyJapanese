@@ -15,7 +15,7 @@ class Complete():
 
     def make_df(self):
         self.test()
-        new_date = self.date()
+        new_date = self.get_date()
         self.df = pd.DataFrame({
             'Date': new_date,
             'Easy URL': self.easy_urls,
@@ -25,9 +25,12 @@ class Complete():
         })
         
     def concat(self):
-        df_old = pd.read_csv('../data/data_pool.csv')
+        df_old = pd.read_csv('/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/easyJapanese/data/data_pool.csv')
         self.df_piled = pd.concat([self.df, df_old])
-        df_piled.to_csv('../data/data_pool.csv', index=False)
+        self.df_piled.to_csv(
+                '/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/easyJapanese/data/data_pool_test.csv', 
+                index=False
+                )
         return self.df_piled
     
     def test(self):
@@ -40,13 +43,13 @@ class Complete():
         except LengthError:
             print(traceback.print_exc())
 
-    def date(self):
-        df = pd.read_csv('../data/data_pool.csv')
+    def get_date(self):
+        df = pd.read_csv('/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/easyJapanese/data/data_pool.csv')
         old_date = datetime.datetime.strptime(
             df['Date'][0], '%Y-%m-%d'
             )
         new_date_raw = datetime.datetime.strptime(
-                self.date, '%m年%d日'
+                self.date, '%m月%d日'
                 )
         if (old_date.month==12) & (new_date_raw.month==1):
             new_year = old_date.year + 1

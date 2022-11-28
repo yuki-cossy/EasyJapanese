@@ -31,9 +31,9 @@ from easyjapanese.complete import Complete
 def EasyJapanese():
     easy = Easy()
     old_date, easy_urls = easy.get_urls_date()
-    easy_articles = easy.get_articles()
+    easy_articles = easy.get_articles(easy_urls)
     
-    regular = Regular()
+    regular = Regular(easy_urls)
     regular_urls = regular.get_urls()
     regular_articles = regular.get_articles()
 
