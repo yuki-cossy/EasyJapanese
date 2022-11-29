@@ -26,11 +26,11 @@ class Complete():
         
         
     def concat(self):
-        df_old = pd.read_csv('/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/easyJapanese/data/data_pool.csv')
+        df_old = pd.read_csv('filepath of your data pool')
         self.df_piled = pd.concat([self.df, df_old])
         self.df_piled['Date'] = pd.to_datetime(self.df_piled['Date'])
         self.df_piled.to_csv(
-                '/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/easyJapanese/data/data_pool_test.csv', 
+                'filepath of your data pool', 
                 index=False
                 )
         return self.df_piled
@@ -48,7 +48,7 @@ class Complete():
             print(traceback.print_exc())
 
     def get_date(self):
-        df = pd.read_csv('/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/easyJapanese/data/data_pool.csv')
+        df = pd.read_csv('filepath of your data pool')
         old_date = datetime.datetime.strptime(
             df['Date'][0], '%Y-%m-%d'
             )

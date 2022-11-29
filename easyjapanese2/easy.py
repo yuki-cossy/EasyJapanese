@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 class Easy():
     def __init__(self):
-        self.DRIVER_PATH = '/Users/domolm/.pyenv/versions/3.10.8/lib/python3.10/site-packages/selenium/chromedriver'
+        self.DRIVER_PATH = 'filepath of your Chrome driver'
         self.service = fs.Service(executable_path=self.DRIVER_PATH)
         self.options = Options()
         self.options.add_argument('--window-size=1920,1200')
