@@ -1,26 +1,27 @@
-"""Let's study Easy Japanese (やさしいにほんご) with NHK news web easy!
+"""Let's study Easy Japanese (やさしいにほんご) daily with NHK news web easy!
 
-This module mainly does the functions below.
-- To get the URLs of the easy Japanese news articles
-- To extract the body texts of them
-- To get the URL of the original articles of them
-- To extract the original ones as well
-- To concatenate all the above data
-- To fill up saves NaNs
-- To save them all as a csv file
+This module (package) mainly covers the topics listed below.
+- To get the URLs of the easy Japanese news articles (easy.py)
+- To extract the body texts of them (easy.py)
+- To get the URL of the original articles of them (regular.py)
+- To extract the original ones as well (regular.py)
+- To concatenate all the above data (complete.py)
+- To save them all as a csv file (complete.py)
 
 I do not own any rights for the articles, nor take any responsibility caused 
 by the use of this module. 
 
 Have a great Easy Japanese (やさしいにほんご) life!
 """
-__all__ = ['easy', 'regular', 'complete']
+
 
 import sys
 import time
 
 from tqdm import tqdm
 
+# I don't know but maybe you don't need to import these? 
+# I'd really appreciate if somebody knows the answer! 
 from easyjapanese2.easy import Easy
 from easyjapanese2.regular import Regular
 from easyjapanese2.complete import Complete
@@ -29,6 +30,10 @@ from easyjapanese2.complete import Complete
 # running this code under Python 2.
 if sys.version_info.major < 3:
     raise ImportError('You are trying to use a Python 3-specific version of Easy Japanese under Python 2. This will not work. Please do something on it lol')
+
+# I don't know what to include. Should I include the other libraries (e.g. sys, bs4.BeautifulSoup, ...)
+__all__ = ['EasyJapanese', 'Easy', 'Regular', 'Complete']
+
 
 
 
@@ -76,6 +81,8 @@ def EasyJapanese():
     for soup in tqdm(soups_regular_url):
         reg_url = r.get_url(soup)
         regular_urls.append(reg_url)
+    print('Done retrieving the URLs!')
+    print('All done with regular_urls! Great job!')
     r.shutdown()
 
     # regular_articles
@@ -86,6 +93,8 @@ def EasyJapanese():
     for article in tqdm(soups_regular_article):
         reg_article = r.get_article(article)
         regular_articles.append(reg_article)
+    print('Done retrieving the articles!')
+    print('All done with regular_articles! Great job!')
     r.shutdown()
 
 
