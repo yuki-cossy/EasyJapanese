@@ -38,6 +38,8 @@ __all__ = ['EasyJapanese', 'Easy', 'Regular', 'Complete']
 
 
 def EasyJapanese():
+    """Run all the modules and return a dataframe that includes the newly retrieved data.
+    """
     easy_urls = []
     easy_articles = []
     soups_easy = []
