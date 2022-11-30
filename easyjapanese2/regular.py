@@ -1,20 +1,19 @@
 import re
 import traceback
 
-from selenium import webdriver # webdriver 操作一般用
-from selenium.webdriver.chrome import service as fs # Chrome を driver として設定する用
-from selenium.webdriver.chrome.options import Options # headless モードで作業する用
-from selenium.webdriver.common.by import By # find_element() で参照したい位置を特定する用
+from selenium import webdriver
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 
 
 class Regular():
     def __init__(self):
-        self.DRIVER_PATH = '/Users/domolm/.pyenv/versions/3.10.8/lib/python3.10/site-packages/selenium/chromedriver'
+        self.DRIVER_PATH = 'set the filepath of Chrome driver on your own'
         self.service = fs.Service(executable_path=self.DRIVER_PATH)
         self.options = Options()
         self.options.add_argument('--window-size=1920,1200')
-        # self.options.add_argument('--headless')
+        self.options.add_argument('--headless')
 
     # url := each element of easy_urls (url)
     # url := each element of regular_urls (extract)

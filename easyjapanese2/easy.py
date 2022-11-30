@@ -1,10 +1,10 @@
 import re
 import traceback
 
-from selenium import webdriver # webdriver 操作一般用
-from selenium.webdriver.chrome import service as fs # Chrome を driver として設定する用
-from selenium.webdriver.chrome.options import Options # headless モードで作業する用
-from selenium.webdriver.common.by import By # find_element() で参照したい位置を特定する用
+from selenium import webdriver
+from selenium.webdriver.chrome import service as fs
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 
 class Easy():
@@ -13,7 +13,7 @@ class Easy():
         self.service = fs.Service(executable_path=self.DRIVER_PATH)
         self.options = Options()
         self.options.add_argument('--window-size=1920,1200')
-        # self.options.add_argument('--headless')
+        self.options.add_argument('--headless')
         self.BASE_URL = 'https://www3.nhk.or.jp/news/easy'
 
         
