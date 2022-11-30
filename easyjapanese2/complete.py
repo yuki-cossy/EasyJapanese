@@ -12,9 +12,12 @@ class Complete():
         self.regular_urls = regular_urls
         self.regular_articles = regular_articles
         self.date = date
+        self.SAVEPATH = 'set the filepath on your own, where you save the final output data.'
+        self.df_old = pd.read_csv(self.SAVEPATH)
+        
 
     def make_df(self):
-        self.test()
+        self.input_length_test()
         new_date = self.get_date()
         self.df = pd.DataFrame({
             'Date': new_date,
@@ -26,18 +29,14 @@ class Complete():
         
         
     def concat(self):
-        df_old = pd.read_csv('filepath of your data pool')
-        self.df_piled = pd.concat([self.df, df_old])
+        self.df_piled = pd.concat([self.df, self.df_old])
         self.df_piled['Date'] = pd.to_datetime(self.df_piled['Date'])
-        self.df_piled.to_csv(
-                'filepath of your data pool', 
-                index=False
-                )
+        self.df_piled.to_csv(self.SAVEPATH, index=False)
         return self.df_piled
     
 
     
-    def test(self):
+    def input_length_test(self):
         try:
             if ~(
                 len(self.easy_urls) == len(self.easy_articles)\
@@ -48,9 +47,8 @@ class Complete():
             print(traceback.print_exc())
 
     def get_date(self):
-        df = pd.read_csv('filepath of your data pool')
         old_date = datetime.datetime.strptime(
-            df['Date'][0], '%Y-%m-%d'
+            self.df_old['Date'][0], '%Y-%m-%d'
             )
         new_date_raw = datetime.datetime.strptime(
                 self.date, '%m月%d日'
@@ -66,6 +64,6 @@ class Complete():
 
 
 class LengthError(Exception):
-    """This error notifies the unequal length of the URLs and articles.
+    """This error notifies the unequal length of the inputs; URLs and articles.
     """
     pass
