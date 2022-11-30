@@ -22,9 +22,9 @@ from tqdm import tqdm
 
 # I don't know but maybe you don't need to import these? 
 # I'd really appreciate if somebody knows the answer! 
-from easyjapanese2.easy import Easy
-from easyjapanese2.regular import Regular
-from easyjapanese2.complete import Complete
+from easyjapanese.easy import Easy
+from easyjapanese.regular import Regular
+from easyjapanese.complete import Complete
 
 # The very first thing we do is give a useful error if someone is
 # running this code under Python 2.
@@ -33,7 +33,7 @@ if sys.version_info.major < 3:
 
 # I don't know what to include. Should I include the other libraries (e.g. sys, bs4.BeautifulSoup, ...)
 __all__ = ['EasyJapanese', 'Easy', 'Regular', 'Complete']
-
+__version__ = '0.0.0'
 
 
 
