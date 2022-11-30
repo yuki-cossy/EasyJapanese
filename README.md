@@ -1,6 +1,6 @@
 # EasyJapanese
 Let's study Easy Japanese (やさしいにほんご) with NHK news web easy!  
-This module helps you study intermediate level Japanese! This module mainly covers the topics listed below.  
+This module (package) helps you study intermediate level Japanese! This module mainly covers the topics listed below.  
 - To get the URLs of the most recent easy Japanese news articles
 - To extract the body texts of them
 - To get the URL of the original articles of them
