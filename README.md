@@ -10,8 +10,9 @@ This module helps you study intermediate level Japanese! This module mainly cove
 
 
 Specifically, you can use this module to retrieve daily Easy Japanese(やさしいにほんご) news articles. Here's how it works. 
-1. Edit the DRIVER_PATH (in easy.py), pd.read_csv() & pd.df.to_csv() (in complete.py) 
-2. Run the code below
+1. Prepare the dataframe that has the columns named {'Date', 'Easy URL', 'Easy article', 'Regular URL', 'Regular article'}
+2. Edit the DRIVER_PATH (in easy.py), pd.read_csv() & pd.df.to_csv() (in complete.py) 
+3. Run the code below
 ```
 >>> from easyjapanese2 import EasyJapanese  
 >>> EasyJapanese()  
