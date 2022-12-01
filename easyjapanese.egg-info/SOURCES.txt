@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+easyjapanese/__init__.py
+easyjapanese/complete.py
+easyjapanese/easy.py
+easyjapanese/regular.py
+easyjapanese.egg-info/PKG-INFO
+easyjapanese.egg-info/SOURCES.txt
+easyjapanese.egg-info/dependency_links.txt
+easyjapanese.egg-info/requires.txt
+easyjapanese.egg-info/top_level.txt

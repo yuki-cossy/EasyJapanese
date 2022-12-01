@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: easyjapanese
+Version: 0.0.3
+Summary: Web scraping tool for NHK web news easy
+Home-page: https://github.com/yuki-cossy/EasyJapanese
+Download-URL: https://github.com/yuki-cossy/EasyJapanese
+Author: Yuki Cossy
+Author-email: domokomod5@gmail.com
+Maintainer: Yuki Cossy
+Maintainer-email: domokomod5@gmail.com
+License: MIT
+Requires-Python: >=3.6
+License-File: LICENSE
+
 ############
 EasyJapanese
 ############

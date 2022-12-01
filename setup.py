@@ -1,8 +1,7 @@
 from setuptools import setup
 import easyjapanese
 
-
-DESCRIPTION_CONTENT_TYPE = 'text/markdown',
+description = 'Web scraping tool for NHK web news easy'
 NAME = 'easyjapanese'
 AUTHOR = 'Yuki Cossy'
 AUTHOR_EMAIL = 'domokomod5@gmail.com'
@@ -14,8 +13,9 @@ PYTHON_REQUIRES = ">=3.6"
 INSTALL_REQUIRES = ['tqdm', 'pandas', 'selenium', 'beautifulsoup4']
 PACKAGES = ['easyjapanese']
 
+# I don't know why but it didn't work out in the way I wanted.
 with open('README4PyPI.md', 'r') as desc:
-    description = desc.read()
+    long_description = desc.read()
 
 
 setup(name=NAME,
@@ -24,7 +24,7 @@ setup(name=NAME,
       maintainer=AUTHOR,
       maintainer_email=AUTHOR_EMAIL,
       description=description,
-      description_content_type=DESCRIPTION_CONTENT_TYPE,
+      long_description=long_description,
       license=LICENSE,
       url=URL,
       version=VERSION,
