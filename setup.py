@@ -14,7 +14,7 @@ PYTHON_REQUIRES = ">=3.6"
 INSTALL_REQUIRES = ['tqdm', 'pandas', 'selenium', 'beautifulsoup4']
 PACKAGES = ['easyjapanese']
 
-with open('README.md', 'r') as desc
+with open('README4PyPI.md', 'r') as desc
     long_description = desc.read()
 
 
