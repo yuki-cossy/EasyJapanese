@@ -2,7 +2,7 @@ from setuptools import setup
 import easyjapanese
 
 
-DESCRIPTION = 'Scraping tool for NHK NEW WEB EASY'
+DESCRIPTION_CONTENT_TYPE = 'text/markdown',
 NAME = 'easyjapanese'
 AUTHOR = 'Yuki Cossy'
 AUTHOR_EMAIL = 'domokomod5@gmail.com'
@@ -15,7 +15,7 @@ INSTALL_REQUIRES = ['tqdm', 'pandas', 'selenium', 'beautifulsoup4']
 PACKAGES = ['easyjapanese']
 
 with open('README4PyPI.md', 'r') as desc:
-    long_description = desc.read()
+    description = desc.read()
 
 
 setup(name=NAME,
@@ -23,8 +23,8 @@ setup(name=NAME,
       author_email=AUTHOR_EMAIL,
       maintainer=AUTHOR,
       maintainer_email=AUTHOR_EMAIL,
-      description=DESCRIPTION,
-      long_description=long_description,
+      description=description,
+      description_content_type=DESCRIPTION_CONTENT_TYPE,
       license=LICENSE,
       url=URL,
       version=VERSION,
