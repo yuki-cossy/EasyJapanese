@@ -1,0 +1,30 @@
+<p># EasyJapanese</p>
+<div class="line-block">
+<div class="line">Let’s study Easy Japanese (やさしいにほんご) with NHK news web easy!</div>
+<div class="line">This module (package) helps you study intermediate level Japanese!</div>
+<div class="line">This module mainly covers the topics listed below.</div>
+</div>
+<ul class="simple">
+<li><p>To get the URLs of the most recent easy Japanese news articles</p></li>
+<li><p>To extract the body texts of them</p></li>
+<li><p>To get the URL of the original articles of them</p></li>
+<li><p>To extract the original ones as well</p></li>
+<li><p>To concatenate all the above data</p></li>
+<li><p>To save them all as a csv file</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Specifically, you can use this module to retrieve daily Easy Japanese(やさしいにほんご) news articles.</div>
+<div class="line">Here’s how it works.</div>
+</div>
+<p>1. Prepare the dataframe that has the columns named  {‘Date’, ‘Easy URL’, ‘Easy article’, ‘Regular URL’, ‘Regular article’}.
+This module concatenate the newly retrieved data with this dataframe.
+2. Run the code below.:</p>
+<pre>&gt;&gt;&gt; from easyjapanese2 import EasyJapanese
+
+&gt;&gt;&gt; EasyJapanese()</pre>
+<p>3. Input the DRIVER_PATH, which is the filepath where your Chrome Driver is,
+and SAVE_PATH, which is the filepath where there is a csv file you prepared in the 1st process.</p>
+<p>Have a great Easy Japanese (やさしいにほんご) life!</p>
+<p>I do not own any rights for the articles, nor take any responsibility caused
+by the use of this module.</p>
+
