@@ -47,7 +47,7 @@ class Complete():
         self.date = date
         SAVE_PATH = input('The filepath, where you want to save the final output data?')
         self.SAVE_PATH = SAVE_PATH
-        self.df_old = pd.read_csv(self.SAVEPATH)
+        self.df_old = pd.read_csv(self.SAVE_PATH)
         
 
     def make_df(self):
@@ -69,7 +69,7 @@ class Complete():
         """
         self.df_piled = pd.concat([self.df, self.df_old])
         self.df_piled['Date'] = pd.to_datetime(self.df_piled['Date'])
-        self.df_piled.to_csv(self.SAVEPATH, index=False)
+        self.df_piled.to_csv(self.SAVE_PATH, index=False)
         return self.df_piled
     
 
