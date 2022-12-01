@@ -28,6 +28,12 @@ class Regular():
       * shutdown()
       * get_article(soup)
 
+    Parameters
+    ----------
+    DRIVER_PATH : str
+        The filepath of your Chrome driver. To prevent the tedious work of inputting,
+        get this path from the attribute of Easy() class.
+
     Attributes
     ----------
     DRIVER_PATH : str
@@ -48,11 +54,11 @@ class Regular():
     soup_article : bs4.BeautifulSoup
         The parsed web page data for the article retrieval.
     """
-    def __init__(self):
+    def __init__(self, DRIVER_PATH):
         """Constructor.
         Define the attributes for start().
         """
-        self.DRIVER_PATH = 'Set your own Chrome Driver filepath'
+        self.DRIVER_PATH = DRIVER_PATH
         self.service = fs.Service(executable_path=self.DRIVER_PATH)
         self.options = Options()
         self.options.add_argument('--window-size=1920,1200')

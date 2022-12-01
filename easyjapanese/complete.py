@@ -24,7 +24,7 @@ class Complete():
         A list of the body text of NEWS WEB articles.
     date : str
         Date of the newly retrieved data
-    SAVEPATH : str
+    SAVE_PATH : str
         The filepath of the directory where you want to save all the retrieved data.
     df_old : pandas.core.frame.DataFrame
         A pandas dataframe that you want to concatenate your new data with.
@@ -45,7 +45,8 @@ class Complete():
         self.regular_urls = regular_urls
         self.regular_articles = regular_articles
         self.date = date
-        self.SAVEPATH = 'set the filepath on your own, where you save the final output data.'
+        SAVE_PATH = input('The filepath, where you want to save the final output data?')
+        self.SAVE_PATH = SAVE_PATH
         self.df_old = pd.read_csv(self.SAVEPATH)
         
 

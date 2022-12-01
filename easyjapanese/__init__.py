@@ -74,7 +74,7 @@ def EasyJapanese():
     # new_date
     new_date = e.date
 
-    r = Regular()
+    r = Regular(e.DRIVER_PATH)
     # regular_urls
     for url in tqdm(easy_urls):
         r.start(url, url_or_article=True)

@@ -62,7 +62,8 @@ class Easy():
         """Constructor.
         Define the attributes for start_url(), start_extract(), and get_url().
         """
-        self.DRIVER_PATH = 'Set your own Chrome Driver filepaths'
+        DRIVER_PATH = input('The filepath, where your Chrome Driver is?')
+        self.DRIVER_PATH = DRIVER_PATH
         self.service = fs.Service(executable_path=self.DRIVER_PATH)
         self.options = Options()
         self.options.add_argument('--window-size=1920,1200')

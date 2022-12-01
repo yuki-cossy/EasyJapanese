@@ -10,17 +10,17 @@ This module (package) helps you study intermediate level Japanese! This module m
 
 
 Specifically, you can use this module to retrieve daily Easy Japanese(やさしいにほんご) news articles. Here's how it works. 
-1. Prepare the dataframe that has the columns named {'Date', 'Easy URL', 'Easy article', 'Regular URL', 'Regular article'}
-2. Edit the DRIVER_PATH (in easy.py, regular.py), SAVEPATH (in complete.py) 
-3. Run the code below
+1. Prepare the dataframe that has the columns named {'Date', 'Easy URL', 'Easy article', 'Regular URL', 'Regular article'}. This module concatenate the newly retrieved data with this dataframe.  
+2. Run the code below.  
 ```
 >>> from easyjapanese2 import EasyJapanese  
 >>> EasyJapanese()  
 ```
+3. Input the DRIVER_PATH, which is the filepath where your Chrome Driver is, and SAVE_PATH, which is the filepath where there is a csv file you prepared in the 1st process.  
 
+
+Have a great Easy Japanese (やさしいにほんご) life!
 
 
 I do not own any rights for the articles, nor take any responsibility caused 
 by the use of this module. 
-
-Have a great Easy Japanese (やさしいにほんご) life!
