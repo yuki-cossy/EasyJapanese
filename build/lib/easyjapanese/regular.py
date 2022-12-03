@@ -112,7 +112,7 @@ class Regular():
             reg_url = soup.select_one('#js-regular-news').get('href')
             print('Done retrieving the URL!')
         except:
-            print('An unexpected error has occured during obtaining the URL.')
+            print('An unexpected error has occurred during obtaining the URL.')
             traceback.print_exc()
             reg_url = 'Unexpected'
         return reg_url
@@ -138,7 +138,7 @@ class Regular():
             print('Done removing the noise!')
 
         except:
-            print('An expected error has occured during editing the html data.')
+            print('An expected error has occurred during editing the html data.')
             traceback.print_exc()
             soup = None
 
@@ -150,7 +150,7 @@ class Regular():
             reg_article = article
 
         except:
-            print('An expected error has occured during extracting the text.')
+            print('An expected error has occurred during extracting the text.')
             traceback.print_exc()
             reg_article = 'Unexpected'
         return reg_article
