@@ -77,7 +77,8 @@ class Complete():
         """Pile up the created dataframe on the existing dataframe and save it.
         """
         try:
-            self.df_piled = pd.concat([self.df, self.df_old])
+            self.df_piled = pd.concat([self.df, self.df_old])\
+                            .drop_duplicates()
             self.df_piled['Date'] = pd.to_datetime(self.df_piled['Date'])
             self.df_piled.to_csv(self.SAVE_PATH, index=False)
         except:
