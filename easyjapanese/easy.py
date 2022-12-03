@@ -149,7 +149,7 @@ class Easy():
             easy_url = re.sub(r'^./', self.BASE_URL+'/', raw_url)
             print('Done retrieving the URL!')
         except:
-            print('An unexpected error has occured during obtaining the URL.')
+            print('An unexpected error has occurred during obtaining the URL.')
             traceback.print_exc()
             easy_url = 'Unexpected'
         return easy_url
@@ -172,7 +172,7 @@ class Easy():
             easy_article = re.sub(' ', '', article_raw) 
 
         except:
-            print('An unexpected error has occured during obtaining the article.')
+            print('An unexpected error has occurred during obtaining the article.')
             print(f'soup: {soup}\n')
             traceback.print_exc()
             easy_article = 'Unexpected'

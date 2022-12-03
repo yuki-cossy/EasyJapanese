@@ -53,38 +53,52 @@ class Complete():
     def make_df(self):
         """Create the dataframe from the retrieved data.
         """
-        self.input_length_test()
-        new_date = self.get_date()
-        self.df = pd.DataFrame({
-            'Date': new_date,
-            'Easy URL': self.easy_urls,
-            'Easy article': self.easy_articles,
-            'Regular URL': self.regular_urls,
-            'Regular article': self.regular_articles
-        })
+        # length_test didn't work well, so 
+        # self.input_length_test()
+        try:    
+            new_date = self.get_date()
+        except:
+            print('An expected error has occurred during get_date().')
+            traceback.print_exc()
+        try:
+            self.df = pd.DataFrame({
+                'Date': new_date,
+                'Easy URL': self.easy_urls,
+                'Easy article': self.easy_articles,
+                'Regular URL': self.regular_urls,
+                'Regular article': self.regular_articles
+            })
+        except:
+            print('An expected error has occurred during making a df.')
+            traceback.print_exc()
         
         
     def concat(self):
         """Pile up the created dataframe on the existing dataframe and save it.
         """
-        self.df_piled = pd.concat([self.df, self.df_old])
-        self.df_piled['Date'] = pd.to_datetime(self.df_piled['Date'])
-        self.df_piled.to_csv(self.SAVE_PATH, index=False)
+        try:
+            self.df_piled = pd.concat([self.df, self.df_old])
+            self.df_piled['Date'] = pd.to_datetime(self.df_piled['Date'])
+            self.df_piled.to_csv(self.SAVE_PATH, index=False)
+        except:
+            print('An expected error has occurred during concat().')
+            traceback.print_exc()
+            self.df_piled = 'Unexpected'
         return self.df_piled
     
 
     
-    def input_length_test(self):
-        """(Soon to be deleted) Check if the retrieved datas have unequal shape.
-        """
-        try:
-            if ~(
-                len(self.easy_urls) == len(self.easy_articles)\
-                == len(self.regular_urls) == len(self.regular_articles)
-            ):
-                raise LengthError('An unexpected error has occured with some or all of the four inputs.')
-        except LengthError:
-            print(traceback.print_exc())
+    # def input_length_test(self):
+    #     """(Soon to be deleted) Check if the retrieved datas have unequal shape.
+    #     """
+    #     try:
+    #         if ~(
+    #             len(self.easy_urls) == len(self.easy_articles)\
+    #             == len(self.regular_urls) == len(self.regular_articles)
+    #         ):
+    #             raise LengthError('An unexpected error has occured with some or all of the four inputs.')
+    #     except LengthError:
+    #         print(traceback.print_exc())
 
     def get_date(self):
         """Obtain the date of newly retrieded data.
@@ -106,7 +120,7 @@ class Complete():
 
 
 
-class LengthError(Exception):
-    """This error notifies the unequal length of the inputs; URLs and articles.
-    """
-    pass
+# class LengthError(Exception):
+#     """This error notifies the unequal length of the inputs; URLs and articles.
+#     """
+#     pass
