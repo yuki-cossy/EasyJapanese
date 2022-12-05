@@ -1,0 +1,4 @@
+/data/
+# .gitignore
+input.txt
+process_new_test.ipynb

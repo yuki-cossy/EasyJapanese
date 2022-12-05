@@ -1,2 +1,2 @@
 /Users/domolm/.pyenv/versions/3.10.8/lib/python3.10/site-packages/selenium/chromedriver
-/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/EasyJapanese_local_only/data/data_pool.csv
+/Users/domolm/Library/CloudStorage/GoogleDrive-domokomod5@gmail.com/My Drive/Learning/EasyJapanese/data/data_pool.csv

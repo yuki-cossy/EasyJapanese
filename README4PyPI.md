@@ -34,5 +34,4 @@ EasyJapanese
 Have a great Easy Japanese (やさしいにほんご) life!
 
 
-I do not own any rights for the articles, nor take any responsibility caused 
-by the use of this module. 
+I do not own any rights for the articles, nor take any responsibility caused by the use of this module. 
