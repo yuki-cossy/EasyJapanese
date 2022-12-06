@@ -33,7 +33,7 @@ if sys.version_info.major < 3:
 
 # I don't know what to include. Should I include the other libraries (e.g. sys, bs4.BeautifulSoup, ...)
 __all__ = ['EasyJapanese', 'Easy', 'Regular', 'Complete']
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 
 
 

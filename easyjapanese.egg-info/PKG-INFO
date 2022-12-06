@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: easyjapanese
-Version: 0.1.3
+Version: 0.1.4
 Summary: Web scraping tool for NHK web news easy
 Home-page: https://github.com/yuki-cossy/EasyJapanese
 Download-URL: https://github.com/yuki-cossy/EasyJapanese
@@ -48,5 +48,4 @@ EasyJapanese
 Have a great Easy Japanese (やさしいにほんご) life!
 
 
-I do not own any rights for the articles, nor take any responsibility caused 
-by the use of this module. 
+I do not own any rights for the articles, nor take any responsibility caused by the use of this module. 
