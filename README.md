@@ -13,7 +13,7 @@ Specifically, you can use this module to retrieve daily Easy Japanese(やさし�
 1. Prepare the dataframe that has the columns named {'Date', 'Easy URL', 'Easy article', 'Regular URL', 'Regular article'}. This module concatenate the newly retrieved data with this dataframe.  
 2. Run the code below.  
 ```
->>> from easyjapanese2 import EasyJapanese  
+>>> from easyjapanese import EasyJapanese  
 >>> EasyJapanese()  
 ```
 3. Input the DRIVER_PATH, which is the filepath where your Chrome Driver is, and SAVE_PATH, which is the filepath where there is a csv file you prepared in the 1st process.  
