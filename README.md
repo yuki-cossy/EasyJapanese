@@ -13,7 +13,7 @@ Specifically, you can use this module to retrieve daily Easy Japanese(やさし�
 1. Prepare the dataframe that has the columns named {'Date', 'Easy URL', 'Easy article', 'Regular URL', 'Regular article'}. This module concatenate the newly retrieved data with this dataframe.  
 2. Run the code below.  
 ```
->>> pip install easyjapanese
+>>> ! pip install easyjapanese
 >>> from easyjapanese import EasyJapanese  
 >>> EasyJapanese()  
 ```
